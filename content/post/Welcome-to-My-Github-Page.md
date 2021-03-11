@@ -19,6 +19,6 @@ Today I was looking for some info on the web and found myself on a page with a g
 
 After a quick look at [HUGO](https://gohugo.io) it was clearly a really straightforward way to make a blog and maybe I could use it for Documentation Sites on a later date. 
 
-So, here we are. I'll be posting here whenever I add something meaningful to my GitHub Repository. Some of my recent gists will also be featured here as soon as this week. And I'll be doing a quick overview of some of this account repostoriers.
+So, here we are. I'll be posting here whenever I add something meaningful to my GitHub Repository. Some of my recent gists will also be featured here as soon as this week. And I'll be doing a quick overview of some of this account repositories.
 
 Hopefully this will be a hub for sharing info others might find useful. 
