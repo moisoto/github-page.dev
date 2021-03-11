@@ -76,3 +76,32 @@ $ cd github-page.dev.repo
 $ git submodule update --init
 ```
 
+### Adding Content
+
+#### Setting Up Archetypes
+
+When creating a site, HUGO will create a file called *./archetypes/default.md* that will be used whenever you create a file using the commang `hugo new <filename>`. This file is used as a template for generating the front matter of your new file.
+
+Now, we will create a file called *post.md* on that folder. Hugo will use that file instead of *default.md* when you create a new post by using `hugo new post/filename>`.
+
+For HUGO you can use the following template:
+```
+---
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+draft: true
+toc: false
+tags: []
+categories: []
+---
+
+# Descriptive text here...
+<!--more-->
+```
+
+This will:
+* Use the filename of the markdown file to set the post title by replacing dash character (-) with spaces. For example if your run the command `hugo new post/My-First-Post`, the front matter will contain the text `title: "My First Post"` on the generated file.
+
+*  Add the tags specified on `tags: []` to your post. For example you can change this to `tags: ["Coding", "Golang"]` and your post will be associated to those tags and display them at the bottom (in the case of soho theme).
+
+* Use the markdown text before `<!--more-->` as as a description to be shown on the home page along the post title.
