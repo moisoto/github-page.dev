@@ -76,9 +76,7 @@ $ cd github-page.dev.repo
 $ git submodule update --init
 ```
 
-### Adding Content
-
-#### Setting Up Archetypes
+### Setting Up Archetypes
 
 When creating a site, HUGO will create a file called *./archetypes/default.md* that will be used whenever you create a file using the commang `hugo new <filename>`. This file is used as a template for generating the front matter of your new file.
 
