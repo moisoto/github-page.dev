@@ -2,7 +2,11 @@
 
 ### Creating the Web Page 
 
-This repository was created with [Hugo](https://gohugo.io):
+- This repository was created with [Hugo](https://gohugo.io).
+
+- The first step was to create an empty repository on github (or any other repository hub). In this case the repository is called github-page.dev.
+
+- Then we create the site using hugo and add the remote origin:
 ```
 $ hugo new site github-page.dev.repo
 $ cd github-page.dev.repo
@@ -13,8 +17,10 @@ $ git remote add origin https://github.com/moisoto/github-page.dev.git
 $ git push --set-upstream origin master
 ```
 
-The theme used was [SOHO](https://github.com/alexandrevicenzi/soho).<br>
-Since this themes requires changes to the theme itself It was forked to this account: (https://github.com/moisoto/soho.git)<br>
+The theme used was [SOHO](https://github.com/alexandrevicenzi/soho).
+
+Since this themes requires changes to the theme itself It was forked to (https://github.com/moisoto/soho.git)
+
 And added as a submodule:
 ```
 $ git submodule add https://github.com/moisoto/soho.git themes/soho
@@ -23,6 +29,7 @@ $ git push
 ```
 
 **Note:** For more info about the workflow of working with a fork of your favorite HUGO theme, [check this article](https://www.andrewhoog.com/post/git-submodule-for-hugo-themes/).
+
 
 ### Setting up the SOHO theme
 
@@ -59,3 +66,13 @@ $ git add public
 $ git commit -m "Push new commits of 'public' submodule."
 $ git push
 ```
+
+### Clonning your repository
+
+Since this repository has submodules, please remember to initialize them after you clone:
+```
+$ git clone https://github.com/moisoto/github-page.dev.git github-page.dev.repo
+$ cd github-page.dev.repo
+$ git submodule update --init
+```
+
