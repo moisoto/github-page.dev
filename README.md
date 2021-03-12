@@ -7,7 +7,7 @@
 - The first step was to create an empty repository on github (or any other repository hub). In this case the repository is called github-page.dev.
 
 - Then we create the site using hugo and add the remote origin:
-```
+```shell
 $ hugo new site github-page.dev.repo
 $ cd github-page.dev.repo
 $ git init
@@ -22,7 +22,7 @@ The theme used was [SOHO](https://github.com/alexandrevicenzi/soho).
 Since this themes requires changes to the theme itself It was forked to (https://github.com/moisoto/soho.git)
 
 And added as a submodule:
-```
+```shell
 $ git submodule add https://github.com/moisoto/soho.git themes/soho
 $ git commit -m "Add SOHO Theme as a submodule."
 $ git push
@@ -54,7 +54,7 @@ $ git push
 ```
 
 After this you can build the static website by running hugo with no parameters:
-```
+```shell
 $ # Builds the static website on the ./public folder
 $ hugo
 $ cd public
@@ -103,3 +103,102 @@ This will:
 *  Add the tags specified on `tags: []` to your post. For example you can change this to `tags: ["Coding", "Golang"]` and your post will be associated to those tags and display them at the bottom (in the case of soho theme).
 
 * Use the markdown text before `<!--more-->` as as a description to be shown on the home page along the post title.
+
+
+For more information about HUGO Archetypes, please check the [HUGO Documentation](https://gohugo.io/content-management/archetypes/).
+
+### Adding custom Shortcodes
+
+You may need to create custom shortcodes if you need to do additional formatting on your static files.
+
+For example this shortcode can be added to allow centering of text:
+```html
+<div style="text-align: center;">
+{{.Inner}}
+</div>
+```
+
+Adding a shortcode to the hugo website is achieved by creating a ./layouts/shortcodes folder to your website:
+```shell
+$ # From your hugo website root
+$ cd layouts
+$ mkdir shortcodes
+$ cd shortcodes
+```
+
+Now you will create the shortcode file. The filename you choose is important as it will determine the shortcode name used in your markdown:
+```shell
+$ # From your ./layouts/shortcodes folder
+$ echo '<div style="text-align: center;">' > center.html
+$ echo '{{.Inner}}' >> center.html
+$ echo '</div>' >> center.html
+```
+
+Now we can center text using markdown like this:
+```markdown
+{{% center %}}
+# This Heading text is centered!
+This shortcode called `center` will use the center.html file
+{{% /center %}}
+```
+
+For more information on shortcodes, please check the [HUGO Documentation](https://gohugo.io/content-management/shortcodes/).
+
+### Adding custom CSS and Javascript files
+
+We will need to add a custom CSS file in order to be able to align images in our posts.
+
+For this we will use the followin CSS and put it on the file *`./static/css/blog.css`*:
+```css
+img[src$='#center']
+{
+    display: block;
+    margin: 0.7rem auto; /* you can replace the
+     vertical '0.7rem' by whatever floats your boat,
+     but keep the horizontal 'auto' for this to work */
+
+    /* whatever else styles you fancy here */
+}
+
+img[src$='#floatleft']
+{
+    float:left;
+    margin: 0.7rem; /* this margin is totally up to you */
+
+    /* whatever else styles you fancy here */
+}
+
+img[src$='#floatright']
+{
+    float:right;
+    margin: 0.7rem; /* this margin is totally up to you */
+
+    /* whatever else styles you fancy here */
+}
+```
+
+The reason we use the name blog.css is because that's the filename used in the [soho theme recommended](https://github.com/alexandrevicenzi/soho/blob/master/README.md) *`config.toml`* settings for the custom css file:
+```
+## Set custom CSS and/or JS to override site defaults.
+customCss = ["css/blog.css"]
+customJs = ["js/blog.js"]
+```
+
+Now let's insert an image using markdown:
+```markdown
+This is how we normally insert an image:
+![Swift-Logo](/images/some_image.png)
+
+# With the custom CSS we can:
+
+* Insert an centered image:
+![Swift-Logo](/images/some_image.png#center)
+
+* Insert an image floating to the left of your text:
+![Swift-Logo](/images/some_image.png#floatleft)
+
+* Insert an image floating to the right of your text:
+![Swift-Logo](/images/some_image.png#floatright)
+```
+
+**Note:** The *some_image.png* file should be located at *`./static/images/some_image.png`*
