@@ -202,3 +202,5 @@ This is how we normally insert an image:
 ```
 
 **Note:** The *some_image.png* file should be located at *`./static/images/some_image.png`*
+
+Credits for this custom CSS goes to this [Ebadf.net blog post](http://www.ebadf.net/2016/10/19/centering-images-in-hugo/#the-solution)
