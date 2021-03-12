@@ -5,23 +5,23 @@ date: 2021-03-11T22:23:18-04:00
 draft: false
 toc: false
 image: ""
-tags: []
+tags: ["HUGO Websites", "Github"]
 categories: []
 ---
 
 ![GitHub-Octocat](/images/GitHub-Mark-120px-plus.png#floatleft)
 
-The Github repository used for to generate this website is public. And the README.md file contains lots of info on how it was created. 
+The GitHub repository used for to generate this website is public. And the README.md file contains lots of info on how it was created. 
 
 ---
 ### Please check it out at:
-https://github.com/moisoto/github-page.dev)
+https://github.com/moisoto/github-page.dev
 
 <!--more-->
 
-I'll be including all the tweaks I do to the site an themes in the README.md file, hopefully people can find them useful when creating their own pages.
+I'll be including all the tweaks I do to the site and themes in the README.md file, hopefully people can find them useful when creating their own pages.
 
-If you want more detailed instructions about building your Website with HUGO, please check these which I found when starting this GitHub Page:
+If you want more detailed instructions about building your Website with HUGO, please check these which I found when starting this GitHub Page, and then come back to [my website repository](https://github.com/moisoto/github-page.dev) to learn a few more tips that I had to look for elsewere.
 
 * **[Create a Free Blog Site Using GitHub Pages and Hugo](https://youngkin.github.io/post/createafreeblogsite/)**
 
