@@ -5,3 +5,6 @@
 	path = public
 	url = https://github.com/moisoto/moisoto.github.io.git
 	branch = main
+[submodule "themes/hugo-coder"]
+	path = themes/hugo-coder
+	url = https://github.com/moisoto/hugo-coder.git
