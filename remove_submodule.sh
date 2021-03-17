@@ -1,3 +1,4 @@
+#!/bin/bash
 # Procedure Credits: 
 #    https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule
 
@@ -7,7 +8,7 @@ rmv_repo=$2
 
 if [[ -z $submodule ]] ; then
     echo "Sintax:"
-    echo "    ./rm_submodule.sh <submodule_path> [--remove]"
+    echo "    ./remove_submodule.sh <submodule_path> [--delete]"
     echo
     exit
 else
@@ -36,6 +37,14 @@ if [[ ! -d .git/modules/$submodule ]] ; then
     exit
 fi
 
+# Check if folder is actually a submodule (according to file .gitmodules)
+vrf_module=`git config --file .gitmodules --get-regexp path | awk '{ print $2}' | grep "$submodule"`
+if [[ $vrf_module != $submodule ]] ; then
+    echo "$submodule is not actually a submodule."
+    exit
+fi
+
+repo=${PWD##*/}
 echo "This will REMOVE Submodule $submodule from repository $repo"
 
 printf "Do you wish to continue (Y/n)?"
@@ -47,17 +56,17 @@ if [[ $REPLY != "Y" ]] ; then
 fi
 
 echo "Removing Submodule $submodule from repository $repo"
-#mv $submodule ${submodule}_tmp
-#git submodule deinit -f -- $submodule
-#rm -rf .git/modules/$submodule
+mv $submodule ${submodule}_tmp
+git submodule deinit -f -- $submodule
+rm -rf .git/modules/$submodule
 
-if [[ $rmv_repo = "--remove" ]] ; then
+if [[ $rmv_repo = "--delete" ]] ; then
     echo "Removing Submodule folder $submodule"
-    #git rm -f $submodule
-    #rm -rf ${submodule}_tmp
-    #git commit -m "Remove $submodule submodule."
+    git rm -f $submodule
+    rm -rf ${submodule}_tmp
+    git commit -m "Remove $submodule submodule."
 else
     echo "Keeping Submodule folder $submodule"
-    #git rm --cached $submodule
-    #mv ${submodule}_tmp $submodule
+    git rm --cached $submodule
+    mv ${submodule}_tmp $submodule
 fi
