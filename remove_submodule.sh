@@ -64,9 +64,10 @@ if [[ $rmv_repo = "--delete" ]] ; then
     echo "Removing Submodule folder $submodule"
     git rm -f $submodule
     rm -rf ${submodule}_tmp
-    git commit -m "Remove $submodule submodule."
 else
     echo "Keeping Submodule folder $submodule"
     git rm --cached $submodule
     mv ${submodule}_tmp $submodule
 fi
+
+git commit -m "Remove $submodule submodule."
