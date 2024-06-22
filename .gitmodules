@@ -1,6 +1,7 @@
 [submodule "themes/soho"]
 	path = themes/soho
 	url = git@github.com:moisoto/soho.git
+	branch = custom
 [submodule "public"]
 	path = public
 	url = git@github.com:moisoto/moisoto.github.io.git
