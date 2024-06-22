@@ -12,7 +12,7 @@ categories: []
 ![GitHub-Octocat](/images/GitHub-Mark-120px-plus.png#floatleft)
 
 If you are a Github user wanting to host privates repositories, you may wonder what's the easier way to get them up and running.
-You may also have to work with different accounts, and soon become aware of how difficult this can become, specially if you normally use https for your repos.
+You may also have to work with different accounts, and soon become aware of how cumbersome this can become, specially if you normally use https for your repos.
 
 This article will show how to setup and use ssh to host private repositories on serveral accounts in a simple and practical way.
 
