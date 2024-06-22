@@ -13,7 +13,9 @@ $ cd github-page.dev.repo
 $ git init
 $ git add *
 $ git commit -m "Initial Commit"
-$ git remote add origin https://github.com/moisoto/github-page.dev.git
+$ # Use ssh instead of https which is no longer recommended
+$ # git remote add origin https://github.com/moisoto/github-page.dev.git
+$ git remote add origin git@github.com:moisoto/github-page.dev.git # Cloning with SSH
 $ git push --set-upstream origin master
 ```
 
@@ -23,7 +25,9 @@ Since this themes requires changes to the theme itself It was forked to (https:/
 
 And added as a submodule:
 ```shell
-$ git submodule add https://github.com/moisoto/soho.git themes/soho
+$ # Use ssh instead of https which is no longer recommended
+$ # git submodule add https://github.com/moisoto/soho.git themes/soho
+$ git submodule add git@github.com:moisoto/soho.git themes/soho
 $ git commit -m "Add SOHO Theme as a submodule."
 $ git push
 ```
@@ -69,11 +73,15 @@ $ git push
 
 ### Clonning your repository
 
-Since this repository has submodules, please remember to initialize them after you clone:
+Since this repository has submodules, please remember to initialize them after you clone.
+
+The command for initializing the modules is as simple as `git submodule update --init`. But I've noticed that the submodules will be in a DETACHED state after this. To fix this I've now included a script that will take care of it.
+
+Also now the SOHO theme commits are made on a different branch so it's easy to update master to the last version.
 ```
-$ git clone https://github.com/moisoto/github-page.dev.git github-page.dev.repo
+$ git clone git@github.com:moisoto/github-page.dev.git github-page.dev.repo
 $ cd github-page.dev.repo
-$ git submodule update --init
+$ ./init_submodules.sh
 ```
 
 ### Setting Up Archetypes
