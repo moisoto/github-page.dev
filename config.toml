@@ -1,4 +1,5 @@
-baseURL = "http://moisoto.github.io/"
+#baseURL = "http://moisoto.github.io/"
+baseURL = "http://moisoto.dev/"
 languageCode = "en-us"
 title = "MoiSoto's Dev Corner"
 theme = "soho"
