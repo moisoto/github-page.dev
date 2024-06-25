@@ -28,7 +28,7 @@ If you have enough space, just copy them into another local folder on your machi
 Open Finder and Press SHIFT+CMD+G and type `~/Library/Application Support/`, this will take you to the Application Support Folder.
 You can then delete the folder name CloudDocs inside this folder.
 
-At this point you will see the iCloud entry in your Finder Sidebar to show the progress indicator, you can click on it and see that sync is working again. In case this doesn't happen you can force this by executing the following command on terminal:
+At this point you will see the iCloud Drive entry in your Finder Sidebar to show the progress indicator, you can click on it and see that sync is working again. In case this doesn't happen you can force this by executing the following command on terminal:
 
 ```shell
 killall bird
