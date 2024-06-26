@@ -80,3 +80,6 @@ customJs = ["js/blog.js"]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[mediaTypes."application/javascript"]
+suffixes = ["ts","js","jsm","mjs"]
