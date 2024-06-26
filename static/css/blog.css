@@ -20,3 +20,11 @@ img[src$='#floatright']
     margin: 0.7rem;      /* this margin is totally up to you */
     /* whatever else styles you fancy here */
 }
+
+/* Used by frame.html shortcode */
+.framed-content {
+    border: 2px solid #ddd; /* Black border */
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9; /* Light grey background */
+}
