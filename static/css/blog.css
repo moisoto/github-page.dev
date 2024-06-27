@@ -23,7 +23,7 @@ img[src$='#floatright']
 
 /* Used by frame.html shortcode */
 .framed-content {
-    border: 2px solid #ddd; /* Black border */
+    border: 2px solid #ddd; /* Grey border */
     padding: 10px;
     margin: 10px 0;
     background-color: #f9f9f9; /* Light grey background */
