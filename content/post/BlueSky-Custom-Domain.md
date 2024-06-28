@@ -4,7 +4,9 @@ title: "Setting up your BlueSky Custom Domain"
 date: 2024-06-27T10:00:00-04:00
 draft: false 
 toc: false
-image: "/images/opengraph_tn.png"
+#image: "/images/opengraph_tn.png"
+images:
+  - /images/opengraph_tn.png
 tags: [mac, macOS, iCloud, Bug, Fix]
 categories: []
 ---
