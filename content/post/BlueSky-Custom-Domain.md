@@ -6,14 +6,14 @@ draft: false
 toc: false
 #image: "/images/opengraph_tn.png"
 images:
-  - /images/opengraph_tn.png
+  - /images/bluesky_banner_med.jpg
 tags: [mac, macOS, iCloud, Bug, Fix]
 categories: []
 ---
 
 ![BlueSky-Logo](/images/bluesky_logo_small.png#floatleft)
 
-If you love how Twitter felt at the start and are looking for nice alternative, you probably already tried [BlueSky](https://bsky.app). If you haven't this is the best time to do it. You don't need invites anymore and everyone can join.
+If you love how Twitter felt at the start and are looking for a nice alternative, you probably already tried [BlueSky](https://bsky.app). If you haven't, this is the best time to do it. You don't need invites anymore and everyone can join.
 
 This article will show you how to use one of the cooler features of this new platform: *Using your own domain as your user handle*. This is very useful, specially if you have a brand account with a website and you want users to have confidence they are actually interacting with you.
 

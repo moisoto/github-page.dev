@@ -18,6 +18,9 @@ description = "Hosted by GitHub"
 #profilePicture = "images/profile.png"
 profilePicture = "images/profilepic.jpg"
 
+## This conforms to Hugo's Internal opengraph.html partial
+images = ['/images/opengraph_tn.png']
+
 copyright = "Moises Soto"
 license = "CC BY-SA 4.0"
 licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
