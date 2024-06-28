@@ -4,7 +4,7 @@ title: "Repository Spotlight: Git-Utils"
 date: 2024-06-26T10:00:00-04:00
 draft: false 
 toc: false
-image: ""
+images: [ "/images/opengraph_tn.png" ]
 tags: [mac, macOS, iCloud, Bug, Fix]
 categories: []
 ---

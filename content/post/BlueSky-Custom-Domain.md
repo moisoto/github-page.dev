@@ -1,5 +1,5 @@
 ---
-title: "Setting up your BlueSky Custom Domain"
+title: "Setting up your BlueSky Custom Domain Handle"
 #description: <descriptive text here>
 date: 2024-06-27T10:00:00-04:00
 draft: false 
