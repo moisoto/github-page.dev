@@ -7,7 +7,7 @@ toc: false
 #image: "/images/opengraph_tn.png"
 images:
   - /images/bluesky_banner_med.jpg
-tags: [mac, macOS, iCloud, Bug, Fix]
+tags: [Bluesky, Tutorial, Tips, How-To]
 categories: []
 ---
 

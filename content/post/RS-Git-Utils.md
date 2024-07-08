@@ -5,7 +5,7 @@ date: 2024-06-26T10:00:00-04:00
 draft: false 
 toc: false
 images: [ "/images/opengraph_tn.png" ]
-tags: [mac, macOS, iCloud, Bug, Fix]
+tags: [Git, Utils, Utilities, Linux, MacOS]
 categories: []
 ---
 
@@ -75,5 +75,21 @@ This includes files that are staged for commit as well as those that are modifie
 Sintax: `git clog`
 
 My preferred format for git log. Shows filenames, the short hash & commit date.
+
+### git undo
+
+Sintax: `git undo`
+
+This command will create a new commit that will effectively revert to the commit that was made before the current one.
+
+### git hundo
+
+Sintax: `git hundo`
+
+This command will undo the last commit. Use with care. The working directory, the staging area and the commit history will be reset to the commit before the last one.
+
+Do this ONLY when the commit has not been pushed to a remote. Otherwise you will have problems pushing to the remote, since the last commit on the remote will not exist in your local copy.
+
+I'm including this here for rare cases where you don't want to have the last commit on the commit history. I STRONGLY recommend the use of `git undo` instead for most cases.
 
 {{< /frame >}}
