@@ -4,7 +4,7 @@ title: "Repository Spotlight: Git-Utils"
 date: 2024-06-26T10:00:00-04:00
 draft: false 
 toc: false
-images: [ "/images/opengraph_tn.png" ]
+images: [ "/images/git_banner.jpg" ]
 tags: [Git, Utils, Utilities, Linux, MacOS]
 categories: []
 ---
