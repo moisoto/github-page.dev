@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=https://fed.brid.gy/.well-known/webfinger">
-    <link rel="canonical" href="https://fed.brid.gy/.well-known/webfinger">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            // Get the current URL parameters
+            var queryString = window.location.search;
+            
+            // Construct the new URL
+            var newUrl = "https://fed.brid.gy/.well-known/webfinger" + queryString;
+            
+            // Redirect to the new URL
+            window.location.href = newUrl;
+        };
+    </script>
 </head>
 <body>
+    <p>Redirecting to <a id="redirect-url" href="#">the new URL</a>...</p>
+    <script type="text/javascript">
+        document.getElementById("redirect-url").href = "https://fed.brid.gy/.well-known/webfinger" + window.location.search;
+        document.getElementById("redirect-url").textContent = "https://fed.brid.gy/.well-known/webfinger" + window.location.search;
+    </script>
 </body>
 </html>
