@@ -7,7 +7,7 @@ toc: false
 #image: "/images/opengraph_tn.png"
 images:
   - /images/DNS-logo-small.tiff
-tags: [Bluesky, Tutorial, Tips, How-To]
+tags: [Tips, How-To, macOS, Linux, Terminal]
 categories: []
 ---
 
