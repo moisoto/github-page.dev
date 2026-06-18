@@ -1,6 +1,6 @@
 #baseURL = "http://moisoto.github.io/"
 baseURL = "http://moisoto.dev/"
-languageCode = "en-us"
+locale = "en-us"
 title = "MoiSoto's Dev Corner"
 theme = "soho"
 
