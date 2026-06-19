@@ -2,19 +2,19 @@
 title: "WWDC26 Resources"
 #description: <descriptive text here>
 date: 2026-06-18T15:00:00-04:00
-draft: false 
+draft: false
 toc: false
 image: ""
-tags: [AI, LLMs, AI Models, Generative AI, Github, Gists]
+tags: [AI, LLMs, AI Models, Generative AI, Github, Gists, WWDC, WWDC26]
 categories: []
 ---
 
-![WWDC26-Resources](/images/wwdc26.webp)
+![WWDC26-Resources](/images/wwdc26.jpeg)
 
 {{% center %}}
-WWDC 2026 is over! This year is all about Apple Intelligence.
+WWDC26 is over! This year is all about Apple Intelligence.
 <br>
-I created a Gist with my favorite resources from the conference.
+Here is a Gist with my favorite resources from the conference.
 {{% /center %}}
 
 {{% center %}}
